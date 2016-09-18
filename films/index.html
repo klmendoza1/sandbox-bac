@@ -1,0 +1,81 @@
+---
+layout: main
+id: "films"
+title: "Films"
+header: "Films"
+
+
+films:
+ - id: "love-out-loud"
+   name: "Love Out Loud"
+   director: "Gilb Mendoza"
+   image: "filler-640x480-1.jpg"
+   category: "Comedy"
+   runtimeMins: "120"
+   schedule:
+    - date: "December 1"
+      venue: "Gateway Cinema 1"
+      time:
+       - "2PM"
+       - "4PM"
+       - "6PM"
+       - "8PM"
+   plot: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+ - id: "kaba"
+   name: "Kaba"
+   director: "Adrian Maquilan"
+   image: "filler-640x480-2.jpg"
+   category: "Thriller"
+   runtimeMins: "120"
+   schedule:
+    - date: "December 2"
+      venue: "Gateway Cinema 2"
+      time:
+       - "2PM"
+       - "4PM"
+       - "6PM"
+       - "8PM"
+   plot: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+---
+
+<section>
+
+  <div class="container-fluid">
+
+    {% for eachfilm in page.films %}
+    <div class="row row-limit item-film">
+
+      <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+        <h2>{{ eachfilm.name }}</h2>
+        <span>Directed by {{ eachfilm.director }}</span>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+            <img class="img-responsive" src="{{ site.baseurl }}/images/{{ eachfilm.image }}">
+            <div class="item-film-details">
+              <span style="font-weight:900">{{ eachfilm.category }} ({{ eachfilm.runtimeMins }} mins)</span>
+              {% for eachschedule in eachfilm.schedule %}
+              <span>{{ eachschedule.date }} | {{ eachschedule.venue }}</span>
+              <span>{% for eachtime in eachschedule.time %}{{ eachtime }}{% if forloop.last != true %}, {% endif %}{% endfor %}</span>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+            <p>{{ eachfilm.plot }}</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+</section>

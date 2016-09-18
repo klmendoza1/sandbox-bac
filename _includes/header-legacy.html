@@ -1,30 +1,26 @@
-<header id="navbar" class="km-header {% if page.navHide %}{{ ' km-header-hide ' }}{% endif %}">
+<nav>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand visible-xs" href="{{ site.baseurl }}/">QCPinkFestPH<!--img src="{{ site.baseurl }}/images/logo-y4it-wordmark.png"--></a>
+    </div>
 
-  <nav class="km-navbar">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="km-navbar-header">
-        <button type="button" class="km-navbar-toggle hidden">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="km-navbar-brand" style="font-weight:900">
-          <img src="{{ site.baseurl }}/images/logo-y4it-logotype.png">
-        </a>
-      </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        {% for eachitem in site.itemsNavbarLeft %}
+        <li><a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a></li>
+        {% endfor %}
+        <li class="hidden-xs"><a href="{{ site.baseurl }}">Brand</a></li>
+        {% for eachitem in site.itemsNavbarRight %}
+        <li><a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div id="collapse" class="km-navbar-collapse hidden-xs">
-        <ul class="km-navbar-right">
-          <li><a>Speakers</a></li>
-          <li><a>Details</a></li>
-          <li><a>About</a></li>
-          <li><a>FAQ</a></li>
-          <li><a>Organizer</a></li>
-          <a class="btn btn-default">Get Badges</a>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-  </nav>
-
-</header>
+  </div>
+</nav>
