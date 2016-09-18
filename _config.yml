@@ -14,10 +14,10 @@ permalink: pretty
 itemsNavbarLeft:
  - id: "about"
    name: "About"
-   url: "/about"
+   url: "/" #url: "/about"
  - id: "program"
    name: "Program"
-   url: "/program"
+   url: "/" #url: "/program"
    sub:
     - id: "opening"
       name: "Opening"
@@ -38,13 +38,13 @@ itemsNavbarLeft:
 itemsNavbarRight:
  - id: "news"
    name: "News"
-   url: "/news"
+   url: "/" #url: "/news"
  - id: "contact"
    name: "Contact"
    url: "/contact"
  - id: "archive"
    name: "Archive"
-   url: "/archive"
+   url: "/" #url: "/archive"
    sub:
     - id: "2015"
       name: "2015"
@@ -65,7 +65,11 @@ itemsSponsors:
    name: ""
    logo: ""
 
-
+address:
+ - "#605 Sterten,"
+ - "Maginhawa St., Diliman"
+ - "1101 Quezon City, Metro Manila"
+mail: "qcpinkfilmfest@gmail.com"
 urlOfficial: "http://qcpinkfest.com/"
 urlFacebook: "https://www.facebook.com/qcpinkfest/"
 #urlTwitter: "https://twitter.com/y4it"
