@@ -116,24 +116,78 @@ h1 {
 
 .slick-jumbotron-panel .row>div {
   height: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .slick-jumbotron-panel-text {
   position: absolute;
   bottom: 0;
+  right: 15px;
 }
 
 .slick-jumbotron-panel-text h1 {
-  padding-left: 60px;
   text-transform: uppercase;
   /* set font here */
+  font-size: 7em;
 }
 
 .slick-jumbotron-panel-text h1 small {
   color: white;
   display: block;
   /* set font here */
+  font-size: 0.25em;
 }
+
+
+
+
+
+/* PROGRAM - KEPS */
+
+.item-keps {
+  margin-bottom: 50px;
+}
+
+.item-keps:first-of-type {
+  /*margin-top: 50px;*/
+}
+
+.item-keps:last-of-type {
+  margin-bottom: 100px;
+}
+
+section:last-of-type .item-keps:last-of-type {
+  margin-bottom: 0px;
+}
+
+.item-keps,
+.item-keps * {
+  /*color: white;*/
+}
+
+.item-keps h2 {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.item-keps h2+span {
+  margin-bottom: 10px;
+}
+
+.item-keps img {
+  margin-bottom: 10px;
+}
+
+.item-keps p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
+
 
 /* FILMS */
 
@@ -177,17 +231,120 @@ section:last-of-type .item-film:last-of-type {
   margin-bottom: 15px;
 }
 
-#form-contact input,
-#form-contact textarea {
-  box-shadow: none;
+/* FILMS - TRAILERS*/
+
+.item-trailer {
+  margin-bottom: 50px;
+}
+
+.item-trailer:first-of-type {
+  /*margin-top: 50px;*/
+}
+
+.item-trailer:last-of-type {
+  margin-bottom: 100px;
+}
+
+section:last-of-type .item-trailer:last-of-type {
+  margin-bottom: 0px;
+}
+
+.item-trailer,
+.item-trailer * {
+  /*color: white;*/
+}
+
+.item-trailer h2 {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.item-trailer h2+span {
+  margin-bottom: 10px;
+}
+
+.item-trailer img {
+  margin-bottom: 10px;
+}
+
+.item-trailer p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* FILMS - SCHEDULE */
+
+.table-schedule {
+
+}
+
+.table-schedule tr:first-of-type {
+
+}
+
+
+.table-schedule tr:first-of-type th {
+  border: none;
+  text-transform: uppercase;
+}
+
+.table-schedule tr:first-of-type th:first-of-type {
+
+}
+
+.table-schedule tr:first-of-type th:not(:first-of-type) {
+  font-weight: normal;
+}
+
+.table-schedule tr:not(:first-of-type) {
+
+}
+
+.table-schedule tr:not(:first-of-type) td {
+  text-transform: uppercase;
+}
+
+.table-schedule tr:not(:first-of-type) td:first-of-type {
   border: none;
 }
 
-#form-contact textarea {
-  resize: vertical;
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type) {
+  border-style: solid;
+  border-width: 3px 0 3px 3px;
+  border-color: white;
 }
 
-#form-contact button {
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type):last-of-type {
+  border-width: 3px;
+}
+
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type) span {
+
+}
+
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type) a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type) .span-title {
+  font-weight: bold;
+}
+
+.table-schedule tr:not(:first-of-type) td:not(:first-of-type) .span-director {
+
+}
+
+/* FILMS - TICKETS */
+
+#form-tickets #btn-add {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+#form-tickets .btn-default {
   display: block;
   margin-left: auto;
   background: none;
@@ -205,7 +362,7 @@ section:last-of-type .item-film:last-of-type {
   color: white;
 }
 
-#form-contact button {
+#form-tickets .btn-default {
   border-color: transparent;
   -webkit-transition: 250ms ease-out;
   -moz-transition: 250ms ease-out;
@@ -213,8 +370,59 @@ section:last-of-type .item-film:last-of-type {
   transition: 250ms ease-out;
 }
 
-#form-contact button:hover,
-#form-contact button:focus {
+#form-tickets .btn-default:hover,
+#form-tickets .btn-default:focus {
+  border-color: white;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+
+
+
+
+/* CONTACT */
+
+#form-contact input,
+#form-contact textarea {
+  box-shadow: none;
+  border: none;
+}
+
+#form-contact textarea {
+  resize: vertical;
+}
+
+#form-contact .btn-default {
+  display: block;
+  margin-left: auto;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+
+  border-style: solid;
+  border-color: transparent;
+  border-width: 3px;
+  border-radius: 5px;
+  padding: 10px 8px;
+  color: white;
+}
+
+#form-contact .btn-default {
+  border-color: transparent;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+#form-contact .btn-default:hover,
+#form-contact .btn-default:focus {
   border-color: white;
   -webkit-transition: 250ms ease-out;
   -moz-transition: 250ms ease-out;
