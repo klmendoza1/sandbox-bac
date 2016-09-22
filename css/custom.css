@@ -129,7 +129,24 @@ h1, h2 {
 
 .km-navbar-grouping>li>ul>li:hover>.km-navbar-dropdown,
 .km-navbar-grouping>li>ul>li:focus>.km-navbar-dropdown {
-  max-height: 65px;
+  max-height: 70px;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.km-navbar-grouping>li>ul>li>.km-navbar-dropdown>li>a {
+  font-weight: normal;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.km-navbar-grouping>li>ul>li>.km-navbar-dropdown>li:hover>a,
+.km-navbar-grouping>li>ul>li>.km-navbar-dropdown>li:focus>a {
+  font-weight: bold;
   -webkit-transition: 250ms ease-out;
   -moz-transition: 250ms ease-out;
   -o-transition: 250ms ease-out;
@@ -380,7 +397,7 @@ section:last-of-type .item-trailer:last-of-type {
 
 /* FILMS - TICKETS */
 
-#form-tickets #btn-add {
+#form-tickets #btn-addfilm {
   background-color: transparent;
   border: none;
   text-decoration: underline;

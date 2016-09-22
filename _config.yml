@@ -51,10 +51,10 @@ itemsNavbarRight:
    sub:
     - id: "2015"
       name: "2015"
-      url: "/2015"
+      url: "/" #url: "/2015"
     - id: "2014"
       name: "2014"
-      url: "/2014"
+      url: "/" #url: "/2014"
 
 
 itemsSponsors:
