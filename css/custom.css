@@ -37,14 +37,19 @@ h1, h2 {
 
 /* HEADER */
 
+.km-navbar {
+  background: linear-gradient(180deg,rgb(255, 123, 172),rgba(255, 123, 172, 0));
+}
+
 .km-navbar-collapse * {
   /* set font here */
+  font-family: 'Novecentowide';
 }
 
 
 .km-navbar-left,
 .km-navbar-right {
-  width: calc((100% - 130px) / 2);
+  width: calc((100% - 140px) / 2);
 }
 
 .km-navbar-left {
@@ -65,7 +70,7 @@ h1, h2 {
 
 
 .km-navbar-left>ul>li{
-  margin-right: 15px;
+  margin-right: 25px;
 }
 .km-navbar-left>ul>li:last-child {
   margin-right: 42.5px;
@@ -74,15 +79,14 @@ h1, h2 {
   margin-left: 42.5px;
 }
 .km-navbar-right>ul>li{
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .km-navbar-grouping>li>ul>li>a {
   border-style: solid;
   border-color: transparent;
-  border-width: 3px;
-  border-radius: 5px;
-  padding: 10px 8px;
+  border-width: 0 0 3px 0;
+  padding: 8px 6px;
   color: white;
   font-weight: 900;
   text-transform: uppercase;
@@ -100,6 +104,32 @@ h1, h2 {
 .km-navbar-grouping>li>ul>li:hover>a,
 .km-navbar-grouping>li>ul>li:focus>a {
   border-color: white;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.km-navbar-dropdown {
+  min-width: 75px;
+  padding-top: 10px;
+}
+
+.km-navbar-grouping>li>ul>li>.km-navbar-dropdown {
+  overflow-y: hidden;
+}
+
+.km-navbar-grouping>li>ul>li>.km-navbar-dropdown {
+  max-height: 0px;
+  -webkit-transition: 250ms ease-out;
+  -moz-transition: 250ms ease-out;
+  -o-transition: 250ms ease-out;
+  transition: 250ms ease-out;
+}
+
+.km-navbar-grouping>li>ul>li:hover>.km-navbar-dropdown,
+.km-navbar-grouping>li>ul>li:focus>.km-navbar-dropdown {
+  max-height: 65px;
   -webkit-transition: 250ms ease-out;
   -moz-transition: 250ms ease-out;
   -o-transition: 250ms ease-out;
@@ -134,7 +164,7 @@ h1, h2 {
 
 .slick-jumbotron-panel-text {
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   right: 15px;
 }
 
@@ -450,4 +480,10 @@ section:last-of-type .item-trailer:last-of-type {
 
 #section-contact h1+div {
   padding-left: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  background: linear-gradient(0deg,rgb(252, 90, 151),rgba(252, 90, 151, 0));
 }

@@ -77,7 +77,8 @@ films:
    category: "Comedy"
    runtimeMins: "120"
    schedule:
-    - date: "December 1"
+    - special: "opening"
+      date: "December 1"
       venue: "Gateway Cinema 1"
       time:
        - "2PM"
@@ -92,7 +93,8 @@ films:
    category: "Thriller"
    runtimeMins: "120"
    schedule:
-    - date: "December 2"
+    - special: "opening"
+      date: "December 2"
       venue: "Gateway Cinema 2"
       time:
        - "2PM"
@@ -101,6 +103,17 @@ films:
        - "8PM"
    plot: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
 
+
+sponsors:
+ - id: "sponsor1"
+   name: "Sponsor 1"
+   logo: "filler-300x300.jpg"
+ - id: "sponsor2"
+   name: "Sponsor 2"
+   logo: "filler-300x300.jpg"
+ - id: "sponsor3"
+   name: "Sponsor 3"
+   logo: "filler-300x300.jpg"
 
 address:
  - "#605 Sterten,"

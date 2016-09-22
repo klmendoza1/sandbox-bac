@@ -30,14 +30,14 @@ panelsJumbotron:
 
 ---
 
-<section id="section-jumbotron" style="margin-top:-180px;">
+<section id="section-jumbotron" style="margin-top:-180px;margin-bottom:-100px;">
 
   <div class="slick-jumbotron">
 
     {% for eachpanel in page.panelsJumbotron %}
     <div class="slick-jumbotron-panel" style="background-image:url('{{ site.baseurl }}/images/{{ eachpanel.image }}')">
       <div class="container-fluid">
-        <div class="row row-limit-wide" style="">
+        <div class="row row-limit" style="">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="slick-jumbotron-panel-text">
               <h1>

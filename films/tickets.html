@@ -19,16 +19,16 @@ header: "Ticket Reservation"
           <div class="row">
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formSurname">Surname:</label>
-                <div class="col-lg-9">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formSurname">Surname:</label>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                   <input class="form-control" id="formSurname">
                 </div>
               </div>
             </div>
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formFirstname">Firstname:</label>
-                <div class="col-lg-9">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formFirstname">Firstname:</label>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                   <input class="form-control" id="formFirstname">
                 </div>
               </div>
@@ -38,16 +38,16 @@ header: "Ticket Reservation"
           <div class="row"-->
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formMobile">Mobile #:</label>
-                <div class="col-lg-9">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formMobile">Mobile #:</label>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                   <input class="form-control" id="formMobile">
                 </div>
               </div>
             </div>
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formEmail">E-mail Add:</label>
-                <div class="col-lg-9">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formEmail">E-mail Add:</label>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                   <input class="form-control" id="formEmail">
                 </div>
               </div>
@@ -57,16 +57,16 @@ header: "Ticket Reservation"
           <div class="row row-ticket">
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formFilm1">Film:</label>
-                <div class="col-lg-9">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formFilm1">Film:</label>
+                <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
                   <input class="form-control" id="formFilm1">
                 </div>
               </div>
             </div>
             <div class="form-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12">
               <div class="form-group">
-                <label class="control-label col-lg-3" for="formTickets1"># of Tickets:</label>
-                <div class="col-lg-4">
+                <label class="control-label col-lg-3 col-md-4 col-sm-4 col-xs-12" for="formTickets1"># of Tickets:</label>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                   <input class="form-control" id="formTickets1">
                 </div>
               </div>
@@ -88,32 +88,6 @@ header: "Ticket Reservation"
             <button type="submit" class="btn btn-default">Submit</button>
           </div>
         </form>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="section-contact">
-
-  <div class="container-fluid">
-
-    <div class="row row-limit">
-
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-        <h1>Contact Us:</h1>
-        <div>
-          <span>E-mail: {{ site.mail }}</span><br/><br/>
-          <span>Address:<br/>
-            {% for eachline in site.address %}
-            {{ eachline }}<br/>
-            {% endfor %}
-          </span>
-        </div>
 
       </div>
 

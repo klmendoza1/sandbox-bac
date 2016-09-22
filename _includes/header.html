@@ -20,7 +20,7 @@
               {% if eachitem.sub %}
               <ul class="km-navbar-dropdown">
               {% for eachsub in eachitem.sub %}
-                <li><a href="{{ site.baseurl }}{% if eachitem.url != "/" %}{{ eachitem.url }}{% else %}/{{ eachitem.id }}{% endif %}{{ eachsub.url }}">{{ eachsub.name }}</a></li>
+                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
               {% endfor %}
               </ul>
               {% endif %}
@@ -39,9 +39,9 @@
             <li>
               <a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a>
               {% if eachitem.sub %}
-              <ul class="km-navbar-dropdown hidden">
+              <ul class="km-navbar-dropdown">
               {% for eachsub in eachitem.sub %}
-                <li><a href="{{ site.baseurl }}{{ eachitem.url }}{{ eachsub.url }}">{{ eachsub.name }}</a></li>
+                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
               {% endfor %}
               </ul>
               {% endif %}

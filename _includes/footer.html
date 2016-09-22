@@ -1,10 +1,10 @@
 <footer{% if page.title == "Home" %} class="footer-home"{% endif %}>
-  <div class="container-fluid">
-    <div class="row row-limit-wide">
-      <div class="col-lg-12">
-        <h1>Yas</h1>
-        <h1>Yas</h1>
-        <h1>Yas</h1>
+  <div class="container-fluid" style="padding-top:30px;">
+    <div class="row row-limit">
+      <div class="col-lg-12 text-center" style="padding-top: 15px;padding-bottom: 15px;border-style: solid;border-width: 2px 0 0 0;border-color:white;">
+        {% for eachsponsor in site.sponsors %}
+        <img class="img-responsive" style="max-width:50px;display:inline-block" src="{{ site.baseurl }}/images/{{ eachsponsor.logo }}">
+        {% endfor %}
       </div>
     </div>
   </div>
