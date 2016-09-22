@@ -26,6 +26,18 @@ h1, h2 {
   text-align: center;
 }
 
+h2+span {
+  font-size: 1.2em;
+  font-family: 'Avenir Next';
+}
+
+p {
+  font-size: 1.2em;
+  font-family: 'Avenir Next';
+  line-height: 1.5em;
+  text-align: justify;
+}
+
 .page-content>section:not(:last-child):not(#section-jumbotron) {
   padding-bottom: 50px;
 }
@@ -137,7 +149,7 @@ h1, h2 {
 }
 
 .km-navbar-grouping>li>ul>li>.km-navbar-dropdown>li>a {
-  font-weight: normal;
+  font-weight: 100;
   -webkit-transition: 250ms ease-out;
   -moz-transition: 250ms ease-out;
   -o-transition: 250ms ease-out;
