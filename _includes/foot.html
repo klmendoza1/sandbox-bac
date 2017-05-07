@@ -12,6 +12,7 @@
 <script>
   $(document).ready(function(){
 
+
     {% if page.id == "home" %}
     $('.slick-jumbotron').slick({
       slidesToShow: 1,
@@ -26,15 +27,56 @@
       fade: true,
       cssEase: 'linear',
     });
+    {% endif %}
 
-    // put hover script here
+    {% if page.id == "edge" %}
+    $('.slick-edge').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      autoplay: false,
+      infinite: true,
+      fade: true,
+      cssEase: 'linear',
+    });
 
+    $('.button-edge').click(function(){
+      $('.slick-edge').slick('slickGoTo', parseInt($(this).attr("value"))-1);
+    });
     {% endif %}
 
   });
 </script>
 {% endif %}
 
-{% if page.id == "tickets" %}
-<script type="text/javascript" src="{{ site.baseurl }}/js/addfilm.js"></script>
-{% endif %}
+<script>
+
+/*
+  // Add slideDown animation to Bootstrap dropdown when expanding.
+  $('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // Add slideUp animation to Bootstrap dropdown when collapsing.
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+*/
+
+/*
+  // Add slideDown animation to Bootstrap dropdown when expanding.
+  $('.dropdown').hover(function(){ 
+    $('.dropdown-toggle', this).trigger('click'); 
+  });
+*/
+
+/*
+  $('.dropdown>a').focus(function(){ 
+    //alert('triggered');
+    var holder = $(this).parent();
+    $('.dropdown-toggle', holder).trigger('click'); 
+  });
+*/
+
+</script>

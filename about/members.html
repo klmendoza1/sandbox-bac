@@ -1,0 +1,28 @@
+---
+layout: main
+id: "members"
+title: "Members"
+header: "BAC Members"
+
+slick: false
+---
+
+<section class="section-body">
+
+  <div class="container-fluid">
+
+    {% for eachnum1 in (1...3) %}
+    <div class="row row-limit">
+      {% for eachnum2 in (1...3) %}
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs 12">
+        {% if site.switchPanels %}<div class="panel panel-default panel-filler panel-filler-square ">{% endif %}
+          <span>Person</span>
+        {% if site.switchPanels %}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    
+  </div>
+
+</section>

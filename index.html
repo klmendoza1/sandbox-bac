@@ -8,29 +8,29 @@ slick: true
 
 panelsJumbotron:
  - id: "main"
-   name: "Main"
+   name: "Slide One"
    text: ""
    image: "filler-640x480-1.jpg"
    url: ""
  - id: "program"
-   name: "Program"
+   name: "Slide Two"
    text: ""
    image: "filler-640x480-2.jpg"
    url: ""
  - id: "film"
-   name: "Film"
+   name: "Slide Three"
    text: ""
    image: "filler-640x480-1.jpg"
    url: ""
  - id: "news"
-   name: "News"
+   name: "Slide Four"
    text: ""
    image: "filler-640x480-2.jpg"
    url: ""
 
 ---
 
-<section id="section-jumbotron" style="margin-top:-180px;margin-bottom:-100px;">
+<section id="section-jumbotron" style="margin-top:-195px">
 
   <div class="slick-jumbotron">
 
@@ -52,5 +52,26 @@ panelsJumbotron:
     {% endfor %}
 
   </div>
+
+</section>
+
+<section class="section-body">
+
+  <section id="section-feed">
+    <div class="container-fluid">
+      <div class="row row-limit">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs 12">
+          {% if site.switchPanels %}<div class="panel panel-default panel-filler" style="height: 480px;">{% endif %}
+            <span>Facebook feed</span>
+          {% if site.switchPanels %}</div>{% endif %}
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs 12">
+          {% if site.switchPanels %}<div class="panel panel-default panel-filler" style="height: 480px;">{% endif %}
+            <span>Twitter feed</span>
+          {% if site.switchPanels %}</div>{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
 
 </section>

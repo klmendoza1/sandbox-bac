@@ -1,0 +1,57 @@
+<nav class="km-navbar">
+  <div class="container">
+    <!--div class="km-navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand visible-xs" href="{{ site.baseurl }}/">QCPinkFestPH<img src="{{ site.baseurl }}/images/logo-y4it-wordmark.png"></a>
+    </div-->
+
+    <div id="km-navbar" class="km-navbar-collapse">
+      <ul class="km-navbar-grouping">
+        <li class="km-navbar-left">
+          <ul class="">
+            {% for eachitem in site.itemsNavbarLeft %}
+            <li>
+              <a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a>
+              {% if eachitem.sub %}
+              <ul class="km-navbar-dropdown">
+              {% for eachsub in eachitem.sub %}
+                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+        <li class="km-navbar-brand hidden-xs">
+          <a href="{{ site.baseurl }}/"><img class="" src="{{ site.baseurl }}/images/filler-300x300.jpg"></a>
+        </li>
+
+        <li class="km-navbar-right">
+          <ul class="">
+            {% for eachitem in site.itemsNavbarRight %}
+            <li>
+              <a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a>
+              {% if eachitem.sub %}
+              <ul class="km-navbar-dropdown">
+              {% for eachsub in eachitem.sub %}
+                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

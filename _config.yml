@@ -1,129 +1,92 @@
 # Site settings
 
-title: "QC International Pink Film Festival 2016"
-baseurl: http://toffmendoza.me/sandbox-qcpinkfest
-#baseurl: http://qcpinkfest.com
+title: "UP Business Administration Council"
+baseurl: http://toffmendoza.me/sandbox-bac
+#baseurl: http://
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 
 # Site variables
-
+switchPanels: true
 
 itemsNavbarLeft:
  - id: "about"
-   name: "About"
-   url: "/" #url: "/about"
- - id: "program"
-   name: "Program"
-   url: "/" #url: "/program"
+   name: "About Us"
+   url: "/about" #url: "/about"
+   lines: 1
+   sub:
+    - id: "vision_mission"
+      name: "Vision and Mission"
+      url: "/vision_mission"
+    - id: "slogan_thrusts"
+      name: "Slogan and Thrusts"
+      url: "/slogan_thrusts"
+    - id: "constitution"
+      name: "Constitution"
+      url: "/constitution"
+    - id: "members"
+      name: "BAC Members"
+      url: "/members"
+    - id: "edge"
+      name: "EDGE Program"
+      url: "/edge"
+    - id: "fin_statements"
+      name: "Financial Statements"
+      url: "/fin_statements"
+ - id: "news"
+   name: "News & Announcements"
+   url: "/news" #url: "/program"
+   lines: 2
+   nameDisplay:
+    - "News &"
+    - "Announcements"
+ - id: "events"
+   name: "Projects & Events"
+   url: "/events"
+   lines: 2
+   nameDisplay:
+    - "Projects &"
+    - "Events"
+itemsNavbarRight:
+ - id: "services"
+   name: "Services"
+   url: "/services" #url: "/news"
+   lines: 1
    sub:
     - id: "opening"
-      name: "Opening"
-      url: "/opening"
-    - id: "keps"
-      name: "Keps"
-      url: "/keps"
- - id: "films"
-   name: "Films"
-   url: "/films"
-   sub:
-    - id: "trailers"
-      name: "Trailers"
-      url: "/trailers"
-    - id: "schedule"
-      name: "Schedule"
-      url: "/schedule"
-    - id: "tickets"
-      name: "Tickets"
-      url: "/tickets"
-itemsNavbarRight:
- - id: "news"
-   name: "News"
-   url: "/" #url: "/news"
+      name: "Lost & Found"
+      url: "/lostandfound"
+    - id: "assetrental"
+      name: "Asset Rental"
+      url: "/assetrental"
+    - id: "ba_line"
+      name: "BA Line"
+      url: "/ba_line"
  - id: "contact"
-   name: "Contact"
+   name: "Contact Us"
    url: "/contact"
- - id: "archive"
-   name: "Archive"
-   url: "/" #url: "/archive"
+   lines: 1
+ - id: "search"
+   name: "Search"
+   url: "/search" #url: "/archive"
+   lines: 1
    sub:
-    - id: "2015"
-      name: "2015"
+    - id: "searchbar"
+      name: "(search bar goes here)"
       url: "/" #url: "/2015"
-    - id: "2014"
-      name: "2014"
-      url: "/" #url: "/2014"
 
-
-itemsSponsors:
- - id: ""
-   name: ""
-   logo: ""
- - id: ""
-   name: ""
-   logo: ""
- - id: ""
-   name: ""
-   logo: ""
-
-
-films:
- - id: "love-out-loud"
-   name: "Love Out Loud"
-   director: "Gilb Mendoza"
-   image: "filler-640x480-1.jpg"
-   category: "Comedy"
-   runtimeMins: "120"
-   schedule:
-    - special: "opening"
-      date: "December 1"
-      venue: "Gateway Cinema 1"
-      time:
-       - "2PM"
-       - "4PM"
-       - "6PM"
-       - "8PM"
-   plot: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
- - id: "kaba"
-   name: "Kaba"
-   director: "Adrian Maquilan"
-   image: "filler-640x480-2.jpg"
-   category: "Thriller"
-   runtimeMins: "120"
-   schedule:
-    - special: "opening"
-      date: "December 2"
-      venue: "Gateway Cinema 2"
-      time:
-       - "2PM"
-       - "4PM"
-       - "6PM"
-       - "8PM"
-   plot: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
-
-
-sponsors:
- - id: "sponsor1"
-   name: "Sponsor 1"
-   logo: "filler-300x300.jpg"
- - id: "sponsor2"
-   name: "Sponsor 2"
-   logo: "filler-300x300.jpg"
- - id: "sponsor3"
-   name: "Sponsor 3"
-   logo: "filler-300x300.jpg"
 
 address:
- - "#605 Sterten,"
- - "Maginhawa St., Diliman"
- - "1101 Quezon City, Metro Manila"
-mail: "qcpinkfilmfest@gmail.com"
-urlOfficial: "http://qcpinkfest.com/"
-urlFacebook: "https://www.facebook.com/qcpinkfest/"
-#urlTwitter: "https://twitter.com/y4it"
-#urlInstagram: "https://www.instagram.com/y4it/"
-#urlYouTube: "https://www.youtube.com/user/iloveY4iT"
-#urlSnapchat: "https://www.snapchat.com/add/y4it"
-#urlViber: "http://chats.viber.com/y4it"
+ - ""
+ - ""
+ - ""
+mail: ""
+urlOfficial: "http://"
+urlFacebook: "https://"
+#urlTwitter: "https://"
+#urlInstagram: "https://"
+#urlYouTube: "https://"
+#urlSnapchat: "https://"
+#urlViber: "http://"

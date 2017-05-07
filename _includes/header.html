@@ -1,57 +1,50 @@
-<nav class="km-navbar">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container">
-    <!--div class="km-navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand visible-xs" href="{{ site.baseurl }}/">QCPinkFestPH<img src="{{ site.baseurl }}/images/logo-y4it-wordmark.png"></a>
-    </div-->
-
-    <div id="km-navbar" class="km-navbar-collapse">
-      <ul class="km-navbar-grouping">
-        <li class="km-navbar-left">
-          <ul class="">
-            {% for eachitem in site.itemsNavbarLeft %}
-            <li>
-              <a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a>
-              {% if eachitem.sub %}
-              <ul class="km-navbar-dropdown">
-              {% for eachsub in eachitem.sub %}
-                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
-              {% endfor %}
-              </ul>
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
-
-        <li class="km-navbar-brand hidden-xs">
-          <a href="{{ site.baseurl }}/"><img class="" src="{{ site.baseurl }}/images/logo-qcpinkfest.png"></a>
-        </li>
-
-        <li class="km-navbar-right">
-          <ul class="">
-            {% for eachitem in site.itemsNavbarRight %}
-            <li>
-              <a href="{{ site.baseurl }}{{ eachitem.url }}">{{ eachitem.name }}</a>
-              {% if eachitem.sub %}
-              <ul class="km-navbar-dropdown">
-              {% for eachsub in eachitem.sub %}
-                <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
-              {% endfor %}
-              </ul>
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
-
-      </ul>
+      <div class="navbar-brand navbar-brand-centered"><a href="{{ site.baseurl }}/"><img class="img-responsive" src="{{ site.baseurl }}/images/filler-300x300.jpg"></a></div>
     </div>
 
-  </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+    	<div class="navbar-left">
+	      <ul class="nav navbar-nav">
+	        {% for eachitem in site.itemsNavbarLeft %}
+	        <li{% if eachitem.sub %} class="dropdown"{% endif %}>
+	          <a href="{% if eachitem.sub %}#{% else %}{{ site.baseurl }}{{ eachitem.url }}{% endif %}" class="btn btn-default{% if eachitem.lines %} btn-lines-{{ eachitem.lines }}{% endif %}{% if eachitem.sub %} dropdown-toggle{% endif %}"{% if eachitem.sub %} data-toggle="dropdown"{% endif %}>{% if eachitem.nameDisplay %}{% for eachline in eachitem.nameDisplay %}{{ eachline }}{% if forloop.last == false %}<br class="hidden-xs"/>{% endif %}{% endfor %}{% else %}{{ eachitem.name }}{% endif %} <!--span class="caret"></span--></a>
+	          {% if eachitem.sub %}
+	          <ul class="dropdown-menu" role="menu">
+	          	{% for eachsub in eachitem.sub %}
+	            <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
+	            {% endfor %}
+	          </ul>
+	          {% endif %}
+	        </li>
+	        {% endfor %}
+	      </ul>
+	    </div>
+	    <div class="navbar-right">
+	      <ul class="nav navbar-nav">
+	        {% for eachitem in site.itemsNavbarRight %}
+	        <li{% if eachitem.sub %} class="dropdown"{% endif %}>
+	          <a href="{% if eachitem.sub %}#{% else %}{{ site.baseurl }}{{ eachitem.url }}{% endif %}" class="btn btn-default{% if eachitem.lines %} btn-lines-{{ eachitem.lines }}{% endif %}{% if eachitem.sub %} dropdown-toggle{% endif %}"{% if eachitem.sub %} data-toggle="dropdown"{% endif %}>{{ eachitem.name }} <!--span class="caret"></span--></a>
+	          {% if eachitem.sub %}
+	          <ul class="dropdown-menu" role="menu">
+	          	{% for eachsub in eachitem.sub %}
+	            <li><a href="{{ site.baseurl }}{% if eachsub.url and eachsub.url != '/' %}{% if eachitem.url and eachitem.url != '/' %}{{ eachitem.url }}{{ eachsub.url }}{% else %}/{{ eachitem.id }}{{ eachsub.url }}{% endif %}{% else %}/{% endif %}">{{ eachsub.name }}</a></li>
+	            {% endfor %}
+	          </ul>
+	          {% endif %}
+	        </li>
+	        {% endfor %}
+	      </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>

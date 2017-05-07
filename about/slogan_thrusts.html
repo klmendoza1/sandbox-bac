@@ -1,0 +1,37 @@
+---
+layout: main
+id: "slogan_thrusts"
+title: "Slogan and Thrusts"
+header: "Slogan and Thrusts"
+
+slick: false
+---
+
+<section class="section-body">
+
+  <div class="container-fluid">
+
+    <div class="row row-limit">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs 12">
+        {% if site.switchPanels %}<div class="panel panel-default panel-filler panel-filler-square">{% endif %}
+          <span>Logo</span>
+        {% if site.switchPanels %}</div>{% endif %}
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs 12">
+        {% if site.switchPanels %}<div class="panel panel-default panel-filler panel-filler-square" style="height: 480px;">{% endif %}
+          <span>Slogan</span>
+        {% if site.switchPanels %}</div>{% endif %}
+      </div>
+    </div>
+
+    <div class="row row-limit">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs 12">
+        {% if site.switchPanels %}<div class="panel panel-default panel-filler panel-filler-wide" style="height: 480px;">{% endif %}
+          <span>Thrusts</span>
+        {% if site.switchPanels %}</div>{% endif %}
+      </div>
+    </div>
+    
+  </div>
+
+</section>

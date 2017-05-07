@@ -1,0 +1,66 @@
+---
+layout: main
+id: "events"
+title: "Projects and Events"
+header: "Projects and Events"
+
+slick: true
+
+panelsJumbotron:
+ - id: "main"
+   name: "Slide One"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "program"
+   name: "Slide Two"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+ - id: "film"
+   name: "Slide Three"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "news"
+   name: "Slide Four"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+
+---
+
+<section class="section-body">
+
+  <div class="container-fluid">
+
+    <div class="row row-limit">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs 12">
+        <div class="slick-jumbotron">
+          {% for eachpanel in page.panelsJumbotron %}
+          <div class="slick-jumbotron-panel" style="background-image:url('{{ site.baseurl }}/images/{{ eachpanel.image }}')">
+            <div class="row row-limit" style="">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="slick-jumbotron-panel-text">
+                  <h1>
+                    <small>Lorem Ipsum</small>
+                    {{ eachpanel.name }}
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-limit">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs 12">
+        <span>Event title</span>
+        <div class="panel panel-default">Details</div>
+      </div>
+    </div>
+  </div>
+
+</section>

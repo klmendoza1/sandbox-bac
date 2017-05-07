@@ -1,0 +1,75 @@
+---
+layout: main
+id: "edge"
+title: "EDGE Program"
+header: "BAC EDGE Program"
+
+slick: true
+
+panelsEdge:
+ - id: "main"
+   name: "Slide One"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "program"
+   name: "Slide Two"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+ - id: "film"
+   name: "Slide Three"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "news"
+   name: "Slide Four"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+
+---
+
+<section class="section-body">
+
+  <div class="container-fluid">
+
+    <div class="row row-limit">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs 12">
+        
+        <div class="slick-edge">
+
+          {% for eachpanel in page.panelsEdge %}
+          <div class="slick-edge-panel" style="background-image:url('{{ site.baseurl }}/images/{{ eachpanel.image }}')">
+            <img class="hidden" src="{{ site.baseurl }}/images/{{ eachpanel.image }}"><!-- for crawling -->
+            <div class="container-fluid">
+              <div class="row row-limit" style="">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div class="slick-edge-panel-text">
+                    <h1>
+                      <small>Lorem Ipsum</small>
+                      {{ eachpanel.name }}
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row row-limit">
+      {% for eachnum in (1...12) %}
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs 4">
+        <button class="button-edge" value="{{ eachnum }}">Button</button>
+      </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+
+</section>
